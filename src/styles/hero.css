@@ -1,0 +1,80 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url('src/assets/hero.webp') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 2em;
+    box-sizing: border-box;
+  }
+
+  .hero .quote-button {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 0cap;
+    padding: 0.5em 1em;
+    margin: 45px;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    max-width: 1000px;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .hero h1 {
+    font-size: 10em;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 1.5em;
+  }
+
+  .pitch {
+    margin: 20px;
+  }
+  
+  .pitch-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .pitch-text {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 2.5em;
+  }
+  .pitch-paragraph {
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .pitch-text h1 {
+    font-size: 5em;
+  }
+  
+  .line {
+    width: 2px;
+    height: 100px; 
+    background: #781C45;
+  }

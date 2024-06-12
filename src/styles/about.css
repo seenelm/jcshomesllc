@@ -1,0 +1,16 @@
+.about {
+    padding: 2em;
+    background-color: var(--background-light);
+    color: var(--color-light);
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+  }
+  
+  .about p {
+    font-size: 1.2em;
+  }

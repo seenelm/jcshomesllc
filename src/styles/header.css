@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: transparent;
+    padding: 1em;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease; /* Add this line */
+  }
+
+  .header.scrolled {
+    background-color: white;
+  }
+  
+  .header .nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }

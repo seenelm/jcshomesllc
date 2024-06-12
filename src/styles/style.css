@@ -68,32 +68,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  background-color: transparent;
-  padding: 1em;
-  box-sizing: border-box;
-}
-
-.header .nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-top: 50px; /* Add this line */
-}
-
 .logo img {
   max-width: 180px;
   padding: 10px;
-  margin-top: 50px; /* Add this line */
+  margin-top: 10px;
 }
 
 .nav a {
@@ -111,74 +89,9 @@ button:focus-visible {
   padding: 0.5em 1em;
 }
 
-.hero .quote-button {
-  background-color: transparent;
-  color: black;
-  border: 2px solid black;
-  cursor: pointer;
-  border-radius: 0cap;
-  padding: 0.5em 1em;
-  margin: 45px;
-}
-
 .nav .quote-button:hover {
-  background-color: #0056b3;
-}
-
-.hero {
-  width: 100%;
-  height: 100vh;
-  background: url('src/assets/hero.webp') no-repeat center center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: black;
   color: white;
-  padding: 2em;
-  box-sizing: border-box;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
-  z-index: 1;
-}
-
-.hero-content {
-  max-width: 1000px;
-  text-align: center;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-size: 10em;
-  margin: 0;
-}
-
-.hero p {
-  font-size: 1.5em;
-}
-
-.about {
-  padding: 2em;
-  background-color: var(--background-light);
-  color: var(--color-light);
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.about h2 {
-  font-size: 2.5em;
-  margin-bottom: 1em;
-}
-
-.about p {
-  font-size: 1.2em;
 }
 
 @media (prefers-color-scheme: light) {
