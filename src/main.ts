@@ -6,7 +6,7 @@ import './styles/style.css';
 
 export async function loadComponent(componentId: string, containerId: string): Promise<void> {
   try {
-    const response = await fetch(`/src/components/${componentId}.html`); // Adjust this path as necessary
+    const response = await fetch(`/components/${componentId}.html`); // Adjust this path as necessary
     if (!response.ok) {
       throw new Error(`Failed to fetch component ${componentId}: ${response.statusText}`);
     }
