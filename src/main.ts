@@ -1,8 +1,8 @@
-import './styles/header.css';
-import './styles/hero.css';
-import './styles/whyus.css';
-import './styles/about.css';
-import './styles/style.css';
+import '../public/styles/header.css';
+import '../public/styles/hero.css';
+import '../public/styles/whyus.css';
+import '../public/styles/about.css';
+import '../public/styles/style.css';
 
 export async function loadComponent(componentId: string, containerId: string): Promise<void> {
   try {
