@@ -1,12 +1,10 @@
-
+import { loadComponent } from './utils/loadComponent';
 import './styles/header.css';
 import './styles/hero.css';
 import './styles/whyus.css';
 import './styles/about.css';
 import './styles/style.css';
 
-
-import { loadComponent } from './utils/loadComponent';
 
 loadComponent('header', 'header-container');
 loadComponent('hero', 'hero-container');
