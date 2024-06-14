@@ -1,14 +1,11 @@
-
 import './styles/header.css';
 import './styles/hero.css';
 import './styles/whyus.css';
 import './styles/about.css';
 import './styles/style.css';
 
-
 export async function loadComponent(componentId: string, containerId: string): Promise<void> {
   try {
-    // Adjust the path as necessary to match your project structure
     const response = await fetch(`src/components/${componentId}.html`);
     if (!response.ok) {
       throw new Error(`Failed to fetch component ${componentId}: ${response.statusText}`);
@@ -23,11 +20,29 @@ export async function loadComponent(componentId: string, containerId: string): P
   }
 }
 
-loadComponent('header', 'header-container');
-loadComponent('hero', 'hero-container');
-loadComponent('whyus', 'whyus-container');
-loadComponent('about', 'about-container');
-loadComponent('projects', 'projects-container');
+const componentsToLoad = [
+  { id: 'header', container: 'header-container' },
+  { id: 'hero', container: 'hero-container' },
+  { id: 'whyus', container: 'whyus-container' },
+  { id: 'about', container: 'about-container' },
+  { id: 'projects', container: 'projects-container' }
+];
+
+const loadedComponents = new Set<string>();
+
+function lazyLoadComponents() {
+  componentsToLoad.forEach(component => {
+    const container = document.getElementById(component.container);
+    if (container && container.getBoundingClientRect().top < window.innerHeight && !loadedComponents.has(component.id)) {
+      loadComponent(component.id, component.container).then(() => {
+        loadedComponents.add(component.id);
+      });
+    }
+  });
+}
+
+window.addEventListener('scroll', lazyLoadComponents);
+document.addEventListener('DOMContentLoaded', lazyLoadComponents);
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
