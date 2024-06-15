@@ -1,0 +1,33 @@
+.remodels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.remodel-item {
+    flex: 0 0 23%; /* Make the items narrower */
+    margin: 1%; /* Adjust margin to control spacing */
+    height: 500px; /* Increase the height further */
+    position: relative; /* For positioning the subtitle */
+    border-radius: 10px; /* Round the corners of the div */
+    overflow: hidden; /* Hide any part of the image that doesn't fit in the container */
+}
+
+.remodel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make the image cover the entire area of its container, cropping if necessary */
+    border-radius: 10px; /* Round the corners of the image */
+}
+
+.remodel-item h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin: 0;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* White text color */
+    border-radius: 5px; /* Round the corners for the subtitle background */
+    font-size: 1.2em;
+}

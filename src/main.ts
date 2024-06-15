@@ -2,11 +2,12 @@ import '../public/styles/header.css';
 import '../public/styles/hero.css';
 import '../public/styles/whyus.css';
 import '../public/styles/about.css';
+import '../public/styles/remodels.css';
 import '../public/styles/style.css';
 
 export async function loadComponent(componentId: string, containerId: string): Promise<void> {
   try {
-    const response = await fetch(`/components/${componentId}.html`); // Adjust this path as necessary
+    const response = await fetch(`/components/${componentId}.html`);
     if (!response.ok) {
       throw new Error(`Failed to fetch component ${componentId}: ${response.statusText}`);
     }
@@ -24,8 +25,8 @@ const componentsToLoad = [
   { id: 'header', container: 'header-container' },
   { id: 'hero', container: 'hero-container' },
   { id: 'whyus', container: 'whyus-container' },
+  { id: 'remodels', container: 'remodels-container'},
   { id: 'about', container: 'about-container' },
-  { id: 'projects', container: 'projects-container' }
 ];
 
 const loadedComponents = new Set<string>();
@@ -49,8 +50,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div id="header-container"></div>
     <div id="hero-container"></div>
     <div id="whyus-container"></div>
+    <div id="remodels-container"></div>
     <div id="about-container"></div>
-    <div id="projects-container"></div>
   </div>
 `;
 
