@@ -1,80 +1,134 @@
 .hero {
-    width: 100%;
-    height: 100vh;
-    background: url('/assets/hero.webp') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    padding: 2em;
-    box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  background: url('/assets/hero.webp') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 2em;
+  box-sizing: border-box;
+  position: relative; /* Added for pseudo-element positioning */
+}
+
+.hero .quote-button {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  border-radius: 0;
+  padding: 0.5em 1em;
+  margin: 45px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 1000px;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 10em; /* Maintain larger font size for desktop */
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 5em; /* Smaller font for tablets */
+  }
+
+  .hero p {
+    font-size: 1.2em;
   }
 
   .hero .quote-button {
-    background-color: transparent;
-    color: black;
-    border: 2px solid black;
-    cursor: pointer;
-    border-radius: 0cap;
-    padding: 0.5em 1em;
-    margin: 45px;
+    margin: 20px; /* Adjusted margin for smaller screens */
+    padding: 0.4em 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 1em; /* Reduce padding on mobile */
   }
 
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
-    z-index: 1;
-  }
-  
-  .hero-content {
-    max-width: 1000px;
-    text-align: center;
-    z-index: 2;
-  }
-  
   .hero h1 {
-    font-size: 10em;
-    margin: 0;
-  }
-  
-  .hero p {
-    font-size: 1.5em;
+    font-size: 3em; /* Smaller font for mobile */
   }
 
-  .pitch {
-    margin: 20px;
+  .hero p {
+    font-size: 1em;
   }
-  
+
+  .hero .quote-button {
+    margin: 10px; /* Further reduced margin for mobile */
+    padding: 0.3em 0.6em;
+  }
+}
+
+.pitch {
+  margin: 20px;
+}
+
+.pitch-content {
+  display: flex;
+  justify-content: space-around; /* Default for desktop */
+  align-items: center;
+}
+
+.pitch-text {
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.pitch-paragraph {
+  flex: 1;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.pitch-text h1 {
+  font-size: 5em;
+}
+
+.line {
+  width: 2px;
+  height: 100px;
+  background: #781C45;
+}
+
+@media (max-width: 768px) {
   .pitch-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column; /* Stack items vertically on tablets */
   }
-  
-  .pitch-text {
-    flex: 1;
-    padding: 0 20px;
-    text-align: center;
-    font-size: 2.5em;
+
+  .pitch-text, .pitch-paragraph {
+    font-size: 2em;
+    padding: 0 10px;
   }
-  .pitch-paragraph {
-    flex: 1;
-    padding: 0 20px;
-    text-align: center;
+}
+
+@media (max-width: 480px) {
+  .pitch-text, .pitch-paragraph {
+    font-size: 1.5em; /* Smaller font for mobile */
+    padding: 0 5px;
   }
-  
-  .pitch-text h1 {
-    font-size: 5em;
-  }
-  
-  .line {
-    width: 2px;
-    height: 100px; 
-    background: #781C45;
-  }
+}
