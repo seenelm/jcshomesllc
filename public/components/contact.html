@@ -1,13 +1,32 @@
 <template id="contact-template">
     <section class="contact" id="contact">
-        <div>
-            <form id="contact-form" class="contact-form">
-                <input type="text" id="name" name="name" placeholder="Name" required><br>
-                <input type="email" id="email" name="email" placeholder="Email" required><br>
-                <input type="tel" id="phone" name="phone" placeholder="Phone" required><br>
-                <textarea id="summary" name="summary" rows="4" cols="50" placeholder="Summary" required></textarea><br>
-                <input type="submit" value="Submit">
-            </form>
+        <div class="contact-container">
+            <div class="contact-form-container">
+                <h2>Let's Talk!</h2>
+                <p>Fill out the form below and we will get back to you as soon as possible.</p>
+                <form id="contact-form" class="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Name" required><br>
+                    <input type="email" id="email" name="email" placeholder="Email" required><br>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" required><br>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select Service</option>
+                        <option value="paint">Paint</option>
+                        <option value="drywall">Drywall</option>
+                        <option value="windows">Windows</option>
+                        <option value="tiling">Tiling</option>
+                        <option value="bathroom">Bathroom</option>
+                        <option value="deck">Deck</option>
+                        <option value="basement">Basement</option>
+                        <option value="kitchen">Kitchen</option>
+                        <option value="powerwash">Power Wash</option>
+                    </select><br>
+                    <textarea id="summary" name="summary" rows="4" cols="50" placeholder="Summary" required></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="contact-image">
+                <img src="/assets/contact.webp" alt="Contact Image">
+            </div>
         </div>
     </section>
 </template>
