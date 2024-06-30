@@ -4,6 +4,7 @@ import '../public/styles/whyus.css';
 import '../public/styles/about.css';
 import '../public/styles/remodels.css';
 import '../public/styles/style.css';
+import '../public/styles/contact.css';
 
 export async function loadComponent(componentId: string, containerId: string): Promise<void> {
   try {
@@ -27,6 +28,7 @@ const componentsToLoad = [
   { id: 'whyus', container: 'whyus-container' },
   { id: 'remodels', container: 'remodels-container'},
   { id: 'about', container: 'about-container' },
+  { id: 'contact', container: 'contact-container' },
 ];
 
 const loadedComponents = new Set<string>();
@@ -52,6 +54,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div id="whyus-container"></div>
     <div id="remodels-container"></div>
     <div id="about-container"></div>
+    <div id="contact-container"></div
   </div>
 `;
 
@@ -61,3 +64,20 @@ window.addEventListener('scroll', function() {
     header.classList.toggle('scrolled', window.scrollY > 0);
   }
 });
+
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var name = (document.getElementById('name') as HTMLInputElement).value;
+    var email = (document.getElementById('email') as HTMLInputElement).value;
+    var phone = (document.getElementById('phone') as HTMLInputElement).value;
+    var summary = (document.getElementById('summary') as HTMLTextAreaElement).value;
+
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Phone:', phone);
+    console.log('Summary:', summary);
+  });
+}

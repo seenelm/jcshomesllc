@@ -1,5 +1,13 @@
 <template id="contact-template">
     <section class="contact" id="contact">
-        <div>CONTACT</div>
+        <div>
+            <form id="contact-form" class="contact-form">
+                <input type="text" id="name" name="name" placeholder="Name" required><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <input type="tel" id="phone" name="phone" placeholder="Phone" required><br>
+                <textarea id="summary" name="summary" rows="4" cols="50" placeholder="Summary" required></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </section>
 </template>
