@@ -5,6 +5,7 @@ import '../public/styles/about.css';
 import '../public/styles/remodels.css';
 import '../public/styles/style.css';
 import '../public/styles/contact.css';
+import '../public/styles/footer.css';
 
 export async function loadComponent(componentId: string, containerId: string): Promise<void> {
   try {
@@ -29,6 +30,7 @@ const componentsToLoad = [
   { id: 'remodels', container: 'remodels-container'},
   { id: 'about', container: 'about-container' },
   { id: 'contact', container: 'contact-container' },
+  { id: 'footer', container: 'footer-container' },
 ];
 
 const loadedComponents = new Set<string>();
@@ -54,7 +56,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div id="whyus-container"></div>
     <div id="remodels-container"></div>
     <div id="about-container"></div>
-    <div id="contact-container"></div
+    <div id="contact-container"></div>
+    <div id="footer-container"></div>
   </div>
 `;
 
