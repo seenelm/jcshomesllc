@@ -82,6 +82,12 @@
   }
 }
 
+@supports (padding: max(0px)) {
+  .hero {
+    padding-top: max(20px, env(safe-area-inset-top)); /* Ensure padding at the top to fill white space and consider the notch */
+  }
+}
+
 .pitch {
   margin: 20px;
 }

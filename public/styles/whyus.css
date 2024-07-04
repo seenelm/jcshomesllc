@@ -13,11 +13,12 @@
 .content-box {
   display: flex;
   padding: 20px;
+  flex-direction: column;
 }
 
 .text-content {
   flex: 1;
-  padding-right: 20px;
+  padding: 20px;
   background-color: #781C45;
   color: white;
   display: flex;
@@ -26,7 +27,7 @@
 }
 
 .text-content h2 {
-  font-size: 36px;
+  font-size: 24px;
   margin-bottom: 20px;
 }
 
@@ -35,10 +36,11 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 
 .service-item {
-  width: calc(33.333% - 15px);
+  width: calc(50% - 10px);
   box-sizing: border-box;
   text-align: center;
 }
@@ -48,7 +50,7 @@
 }
 
 .service-text h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin: 0;
 }
 
@@ -65,4 +67,20 @@
   width: 100%;
   height: auto;
   max-width: 150px;
+}
+
+@media (min-width: 600px) {
+  .service-item {
+    width: calc(33.333% - 10px);
+  }
+}
+
+@media (min-width: 900px) {
+  .service-item {
+    width: calc(25% - 10px);
+  }
+
+  .text-content h2 {
+    font-size: 36px;
+  }
 }
