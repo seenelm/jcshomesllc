@@ -24,27 +24,24 @@
   gap: 20px;
 }
 
-@media (max-width: 768px) {
-  .header .nav {
-      display: none; /* Hide navigation links on mobile */
-  }
+.header .nav .nav-link {
+  display: none; /* Hide navigation links on all screen sizes */
+}
 
-  .header .quote-button {
-      display: inline-block;
-      margin-left: auto;
-  }
+.header .nav .quote-button {
+  display: block; /* Ensure the contact button is displayed */
 }
 
 @media (max-width: 768px) {
   .header {
-      justify-content: space-between;
+    justify-content: space-between;
   }
 
   .nav-link {
-      display: none; /* Hide navigation links */
+    display: none; /* Hide navigation links on mobile */
   }
 
   .quote-button {
-      display: block;
+    margin-left: auto;
   }
 }

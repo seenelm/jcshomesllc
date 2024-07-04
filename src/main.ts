@@ -68,6 +68,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
+
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function(event) {

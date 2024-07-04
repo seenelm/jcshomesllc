@@ -6,19 +6,17 @@
 }
 
 .whyus-content {
-  width: 98%;
   min-height: 60vh;
 }
 
 .content-box {
   display: flex;
-  padding: 20px;
   flex-direction: column;
+  padding: 20px;
 }
 
 .text-content {
   flex: 1;
-  padding: 20px;
   background-color: #781C45;
   color: white;
   display: flex;
@@ -54,9 +52,9 @@
   margin: 0;
 }
 
-.text-content, .image-box {
+/* .text-content, .image-box {
   flex: 1;
-}
+} */
 
 .image-container {
   background-color: white;

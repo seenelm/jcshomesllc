@@ -42,3 +42,30 @@
     border-radius: 5px;
     font-size: 1.2em;
 }
+
+/* Mobile-friendly styles */
+@media (max-width: 768px) {
+    .remodel-item {
+        flex: 0 0 48%; /* Two items per row on smaller screens */
+        height: 300px; /* Reduce height for better fit */
+    }
+
+    .remodel-item h3 {
+        font-size: 1em; /* Smaller font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .remodel-item {
+        flex: 0 0 98%; /* One item per row on very small screens */
+        height: 250px; /* Further reduce height for very small screens */
+    }
+
+    #remodels h1 {
+        font-size: 2em; /* Reduce heading size for very small screens */
+    }
+
+    .remodel-item h3 {
+        font-size: 0.9em; /* Smaller font size for very small screens */
+    }
+}
