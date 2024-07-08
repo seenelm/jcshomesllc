@@ -47,7 +47,7 @@
 @media (max-width: 768px) {
     .remodel-item {
         flex: 0 0 48%; /* Two items per row on smaller screens */
-        height: 300px; /* Reduce height for better fit */
+        height: 400px; /* Increase height for better fit */
     }
 
     .remodel-item h3 {
@@ -58,7 +58,7 @@
 @media (max-width: 480px) {
     .remodel-item {
         flex: 0 0 98%; /* One item per row on very small screens */
-        height: 250px; /* Further reduce height for very small screens */
+        height: 450px; /* Increase height for very small screens */
     }
 
     #remodels h1 {
