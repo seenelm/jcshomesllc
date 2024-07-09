@@ -32,7 +32,13 @@
 .contact-form-container h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
-    color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.contact-form-container p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: var(--color-light);
 }
 
 .contact-form {
