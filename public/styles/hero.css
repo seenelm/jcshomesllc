@@ -9,7 +9,7 @@
   color: white;
   padding: 2em;
   box-sizing: border-box;
-  position: relative; /* Added for pseudo-element positioning */
+  position: relative;
 }
 
 .hero .quote-button {
