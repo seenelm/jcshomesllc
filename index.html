@@ -586,21 +586,23 @@
       <div class="row">
         <div class="col-lg-4 col-md-5 offset-md-1">
           <div class="form_container">
-            <form action="">
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+              <input type="hidden" name="access_key" id="accessKey">
               <div>
-                <input type="text" placeholder="Your Name" />
+                <input type="text" name="name" required placeholder="Name" />
               </div>
               <div>
-                <input type="text" placeholder="Phone Number" />
+                <input type="text" name="phone" required placeholder="Phone Number" />
               </div>
               <div>
-                <input type="email" placeholder="Email" />
+                <input type="email" name="email" required placeholder="Email" />
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="text" class="message-box" name="message" placeholder="Message" />
               </div>
               <div class="btn_box">
-                <button>
+                <button type="submit">
                   SEND
                 </button>
               </div>
@@ -764,6 +766,15 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
+  <script>
+    fetch('/.netlify/functions/getAccessKey')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('accessKey').value = data.accessKey;
+    })
+    .catch(error => console.error('Error fetching access key:', error));
+
+  </script>
 
 </body>
 
